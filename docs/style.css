@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 10;
+    box-sizing: border-box;
+    color:rgb(248, 184, 46);
+    /*font-family:'Libre Baskerville', serif;*/
+    font-family: 'Lobster', 'cursive';
+    /*font-family: 'Pacifico', 'cursive';*/
+}
+ul {
+    list-style: none;
+}
+img {
+    width: 200px;
+    vertical-align: auto;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-image: url('https://images.pexels.com/photos/3757231/pexels-photo-3757231.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#frase {
+    width: 35%;
+    text-align: center;
+    justify-content: flex-start;
+    font-size: large;
+    font-style: oblique;
+    padding-left: 30px;
+}
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    }
+header ul li {
+    padding: 15px;
+}
+header ul li a {
+    transition: 400ms;
+    padding: 5px;
+}
+header ul li a:hover {
+    color: rgb(55, 84, 248);
+    text-decoration: underline;
+}
+.container {
+    text-align-last: center;
+}
+.container .name h1 {
+    font-size: 40px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(253, 130, 146);
+}
+.container .name h5 {
+    font-size: 20px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(253, 130, 146);
+}
+#arrow {
+    font-size: 25px;
+    cursor: pointer; /*aqui faz com que ao passar o mouse por cima da seta mude para a mãozinha*/
+    animation: blink 2s  steps(5, start) infinite;/*aqui começa o loop infinito: a cada 2s ele desaparece e reaparece*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@keyframes blink {
+    to {
+        visibility: hidden;/* aqui faz com que a seta desapareça e fique no loop infinito aparece-desaparece*/
+    }
+}
+#animation {
+    transition: 300ms;
+}
+.rotate {
+    transform: rotate(180deg);/*aqui vai fazer a seta rotacionar 18, graus ao clicar nela*/
+    transition: 300ms;/*aqui retarda a rotação para que seja possível ver*/
+}
+.active {
+    display: block !important;
+}
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: larger;
+    font-style: italic;
+    line-height: 25px;
+}
+#deixarContato {
+    font-size: 20px;
+}
+.form {
+    width: 40%;
+    margin: 0 auto;
+}
+.form input {
+    width: 50%;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    color: black;
+}
+.form button {
+    width: 20%;
+    font-size: 15px;
+    padding: 5px 10px;
+    background: linear-gradient(to right, rgb(55, 84, 248) 50%, rgb(248, 184, 46) 50%);/*faz com que mude de uma cor pra outra de forma gradiente*/
+    background-size: 200% 100%;/*faz com que expanda e ocupe todo o espaço*/
+    background-position: right bottom;
+    color: rgb(14, 2, 2);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;/*faz a transição lenta de dentro pra fora*/
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -4px;
+    margin-bottom: 40px;
+}
+.form button:hover {
+    background-position: left bottom;
+    
+}

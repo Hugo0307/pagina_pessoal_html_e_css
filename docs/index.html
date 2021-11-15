@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:
+        wght@700&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Hugo Almeida</title>
+</head>
+<body>
+    <header>
+        <div id="frase">
+           <strong>
+               <p>
+                    Quando pensar em desistir, lembre-se do caminho percorrido para chegar onde você está. <br>
+                    Mantenha o Foco no necessário. <br>
+                    Força! Haverão muitos desafios. <br>
+                    Tenha Fé e não desista!
+               </p>
+            </strong>
+        </div>
+        <ul>
+            <li>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/Hugo0307">GitHub</a>
+            </li>
+            <li>
+                <i class="fab fa-linkedin-in"></i>
+                <a target="_blank" href="https://www.linkedin.com/in/hugo-almeida-72683488/">LinkedIn</a>
+            </li>
+            <li>
+                <i class="fab fa-whatsapp"></i>
+                <a target="_blank" href="https://wa.me/71999887766">WhatsApp</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        
+        <section class="container">
+        <div>
+            <img src="HA.jpg" alt="foto Hugo">
+        </div>
+
+            <div class="name">
+                <h1>Hugo Almeida</h1>
+                <h5>Java Web Developer</h5>
+            </div>
+            
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fas fa-chevron-circle-down"></i>
+            </div>
+
+            <div  style="display: none;" id="about">
+                <p>
+                    <strong>Profissional motivado por desafios e empenhado em solucionar problemas,<br> 
+                            experimentando o novo: estou me desenvolvendo em programação JAVA e <br> 
+                            cada dia um novo aprendizado. Fantástico! Não vou parar por aqui!
+                    </strong>
+                </p>
+            </div>
+
+            <div id="deixarContato">
+                <p>Não esqueça de deixar o seu contato!</p>
+            </div>
+
+            <div id="enviarEmail" class="form">
+                <form action="" id="formulario">
+                    <input id="emailInformado" type="text" placeholder="Digite aqui o seu melhor email">
+                    <strong><button onclick="confirmSubmit()">enviar!</button></strong>
+                </form>        
+            </div>
+        </section>
+    </main>
+
+        <script>
+            function displayAbout() {
+                var arrow = document.getElementById('animation');
+                arrow.classList.toggle('rotate');
+                var display = document.getElementById('about');
+                display.classList.toggle('active');
+            }
+            function confirmSubmit() {
+                var enviarEmail = document.getElementById('enviarEmail');
+                var email = document.querySelector("#emailInformado");/*aqui peguei o que foi digitado no imput*/
+                if(!email.value == ''){/*aqui emiti uma confirmação se o email digitado está correto*/
+                   var confirmacao = confirm('Confirma email: ' + email.value + '?');
+                    if(confirmacao == true) {
+                        alert('Email enviado com sucesso! Obrigado pela visita!');
+                    }      
+                } else {
+                    alert('Por favor digite um email!');
+                }
+                    //
+                
+            }
+        </script>
+</body>
+</html>
