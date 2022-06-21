@@ -15,7 +15,8 @@
     <title>Hugo Almeida</title>
 </head>
 <body>
-    <header>
+    <script src="script.js"></script>
+    <!--<header>
         <div id="frase">
            <strong>
                <p>
@@ -40,7 +41,7 @@
                 <a target="_blank" href="https://wa.me/71999887766">WhatsApp</a>
             </li>
         </ul>
-    </header>
+    </header>-->
     <main>
         
         <section class="container">
@@ -78,28 +79,28 @@
             </div>
         </section>
     </main>
-
-        <script>
-            function displayAbout() {
-                var arrow = document.getElementById('animation');
-                arrow.classList.toggle('rotate');
-                var display = document.getElementById('about');
-                display.classList.toggle('active');
+    
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+        function confirmSubmit() {
+            var enviarEmail = document.getElementById('enviarEmail');
+            var email = document.querySelector("#emailInformado");/*aqui peguei o que foi digitado no imput*/
+            if(!email.value == ''){/*aqui emiti uma confirmação se o email digitado está correto*/
+            var confirmacao = confirm('Confirma email: ' + email.value + '?');
+                if(confirmacao == true) {
+                    alert('Email enviado com sucesso! Obrigado pela visita!');
+                }      
+            } else {
+                alert('Por favor digite um email!');
             }
-            function confirmSubmit() {
-                var enviarEmail = document.getElementById('enviarEmail');
-                var email = document.querySelector("#emailInformado");/*aqui peguei o que foi digitado no imput*/
-                if(!email.value == ''){/*aqui emiti uma confirmação se o email digitado está correto*/
-                   var confirmacao = confirm('Confirma email: ' + email.value + '?');
-                    if(confirmacao == true) {
-                        alert('Email enviado com sucesso! Obrigado pela visita!');
-                    }      
-                } else {
-                    alert('Por favor digite um email!');
-                }
-                    //
-                
-            }
-        </script>
+                //
+            
+        }
+    </script>
 </body>
 </html>
